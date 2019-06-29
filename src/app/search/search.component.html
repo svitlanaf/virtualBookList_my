@@ -45,13 +45,13 @@
                   </td>
                   <td style="width: 30%">
                     <div id="wantToRead">
-                        <button (click)="saveBook(book.id, 'wantToRead')">Add to my "Want to Read Shelf"</button>
+                        <button type="button" class="btn btn-danger" (click)="saveBook(book.id, 'wantToRead')">Want to Read</button>
                       </div>
                       <div id="currentlyReading">
-                        <button (click)="saveBook(book.id, 'currentlyReading')">Add to my "Currently Reading Shelf"</button>
+                        <button type="button" class="btn btn-success" (click)="saveBook(book.id, 'currentlyReading')">Currently Reading</button>
                       </div>
                       <div id="finishedReading">
-                        <button (click)="saveBook(book.id, 'finishedReading')">Add to my "Books I've Read Shelf"</button>
+                        <button type="button" class="btn btn-primary" (click)="saveBook(book.id, 'finishedReading')">Books I've Read</button>
                       </div>
                   </td>
                 </tr>

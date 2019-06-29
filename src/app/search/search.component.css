@@ -20,6 +20,16 @@ img#books {
 .search_results {
     margin-top: 90px;
 }
+
+.book {
+  margin: 5px;
+}
+
+.btn {
+  margin-bottom: 5px;
+  width: 250px;
+}
+
 /*
 .grid {
   display: grid;
@@ -54,12 +64,8 @@ img#books {
 #description {
   grid-area: description;
 } */
-.book {
-  /* border: solid 1px lightgray; */
-  margin: 5px;
-  /* margin-top: 20px; */
-}
-#wantToRead button {
+
+/* #wantToRead button {
   color: white;
   background-color: FireBrick;
   border-color: darkred;
@@ -75,4 +81,4 @@ img#books {
   color: white;
   background-color: SeaGreen;
   border-color: darkgreen;
-}
+} */

@@ -29,6 +29,7 @@ An app to search for and organize all the books on your reading list, using the 
 ## Known Bugs / Limitations
 
 * _If you click "My list" in dropdown menu you'll see the following error in the console: "ERROR TypeError: Cannot read property 'length' of null at ShelfPipe.webpackJsonp.386.ShelfPipe.transform (shelf.pipe.ts:13)", but it doesn't affect the application's functionality._
+* _The process of loggin in takes some time to create (autorize) a user in a firebase. We don't have a proper screen for that, so you'll see a splash page for few seconds._
 
 ## Technologies Used
 
