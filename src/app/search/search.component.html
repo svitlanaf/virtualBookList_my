@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card" style="width: 490px;">
       <div class="text-center" class="card-body">
-       
+
         <img id="books" src="https://pngimage.net/wp-content/uploads/2018/05/background-book-png.png">
         <form>
           <input #query>
@@ -17,41 +17,86 @@
     </div>
   </div>
 
-<div class="search_results">
-<div *ngIf="results">
-  <div *ngFor="let book of books;" class="book">
-    <div class="grid">
 
-      <div *ngIf="!book.volumeInfo.imageLinks" id="image">
-        <img src="./assets/PlaceholderBook.png" weight="150px" height="150px">
+  <div class="search_results">
+      <div *ngIf="results">
+        <div *ngFor="let book of books;" class="book">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td style="width: 20%">
+                    <div *ngIf="!book.volumeInfo.imageLinks">
+                        <img src="./assets/PlaceholderBook.png" weight="150" height="150">
+                        </div>
+                      <div *ngIf="book.volumeInfo.imageLinks" id="image">
+                        <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" weight="150px" height="150px" />
+                      </div>
+                  </td>
+                  <td style="width: 50%">
+                    <div id="title">
+                        {{book.volumeInfo.title}}
+                      </div>
+                      <div id="author">
+                        by {{book.volumeInfo.authors}}
+                      </div>
+                      <div id="description">
+                        <p>{{book.volumeInfo.description}}</p>
+                      </div>
+                  </td>
+                  <td style="width: 30%">
+                    <div id="wantToRead">
+                        <button (click)="saveBook(book.id, 'wantToRead')">Add to my "Want to Read Shelf"</button>
+                      </div>
+                      <div id="currentlyReading">
+                        <button (click)="saveBook(book.id, 'currentlyReading')">Add to my "Currently Reading Shelf"</button>
+                      </div>
+                      <div id="finishedReading">
+                        <button (click)="saveBook(book.id, 'finishedReading')">Add to my "Books I've Read Shelf"</button>
+                      </div>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
         </div>
-      <div *ngIf="book.volumeInfo.imageLinks" id="image">
-        <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" weight="150px" height="150px" />
       </div>
-
-      <div id="title">
-        {{book.volumeInfo.title}}
-      </div>
-      <div id="author">
-        by {{book.volumeInfo.authors}}
-      </div>
-      <div id="description">
-        <p>{{book.volumeInfo.description}}</p>
-      </div>
-      <div id="wantToRead">
-        <button (click)="saveBook(book.id, 'wantToRead')">Add to my "Want to Read Shelf"</button>
-      </div>
-      <div id="currentlyReading">
-        <button (click)="saveBook(book.id, 'currentlyReading')">Add to my "Currently Reading Shelf"</button>
-      </div>
-      <div id="finishedReading">
-        <button (click)="saveBook(book.id, 'finishedReading')">Add to my "Books I've Read Shelf"</button>
-      </div>
-      <div *ngIf="added">
-        <p>This book has been successfully added to your shelves!</p>
-      </div>
-    </div>
-    <hr>
   </div>
-</div>
-</div>
+
+<!--
+  <div class="search_results">
+      <div *ngIf="results">
+        <div *ngFor="let book of books;" class="book">
+          <div class="grid">
+
+            <div *ngIf="!book.volumeInfo.imageLinks" id="image">
+              <img src="./assets/PlaceholderBook.png" weight="150px" height="150px">
+              </div>
+            <div *ngIf="book.volumeInfo.imageLinks" id="image">
+              <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" weight="150px" height="150px" />
+            </div>
+
+            <div id="title">
+              {{book.volumeInfo.title}}
+            </div>
+            <div id="author">
+              by {{book.volumeInfo.authors}}
+            </div>
+            <div id="description">
+              <p>{{book.volumeInfo.description}}</p>
+            </div>
+            <div id="wantToRead">
+              <button (click)="saveBook(book.id, 'wantToRead')">Add to my "Want to Read Shelf"</button>
+            </div>
+            <div id="currentlyReading">
+              <button (click)="saveBook(book.id, 'currentlyReading')">Add to my "Currently Reading Shelf"</button>
+            </div>
+            <div id="finishedReading">
+              <button (click)="saveBook(book.id, 'finishedReading')">Add to my "Books I've Read Shelf"</button>
+            </div>
+            <div *ngIf="added">
+              <p>This book has been successfully added to your shelves!</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+      </div> -->

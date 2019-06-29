@@ -1,6 +1,5 @@
 <div class="container">
-  <h2>My Bookshelves...</h2><br>
-  <h6><a routerLink="/">Return to Book Search</a></h6>
+  <h2>My Bookshelves</h2><br>
   <div class="row">
     <div class="col-lg-4">
       <div class="card">
@@ -13,7 +12,7 @@
                 <div class="card-body" id="want-book">
                   <h6>by {{book.authors}}</h6>
                   <h6>{{book.pageCount}} pages</h6>
-                  <img (click)="goToDetailPage(book)" src = {{book.image}} width=200px length=200px><br>
+                  <img (click)="goToDetailPage(book)" src = {{book.image}}><br>
                   <button id="current" (click)="moveBook(book, 'currentlyReading')">Move To 'Currently Reading'</button>
                   <br>
                   <button id="finished" (click)="moveBook(book, 'finishedReading')">Move to 'Books I've Read' </button><br>
@@ -37,7 +36,7 @@
                 <div class="card-body" id="current-book">
                   <h6>by {{book.authors}}</h6>
                   <h6>{{book.pageCount}} pages</h6>
-                  <img (click)="goToDetailPage(book)" src = {{book.image}} width=200px length=200px><br>
+                  <img (click)="goToDetailPage(book)" src = {{book.image}}><br>
                   <button id="bwant" (click)="moveBook(book, 'wantToRead')">Move To 'Want To Read'</button>
                   <button id="finished" (click)="moveBook(book, 'finishedReading')">Move to 'Books I've Read'</button>
                   <button class="remove" (click)="removeBook(book)">Remove From My Shelves</button>
@@ -60,7 +59,7 @@
                 <div class="card-body" id="finished-book">
                   <h6>by {{book.authors}}</h6>
                   <h6>{{book.pageCount}} pages</h6>
-                  <img (click)="goToDetailPage(book)" src = {{book.image}} width=200px length=200px>
+                  <img (click)="goToDetailPage(book)" src = {{book.image}}>
                   <button id="want" (click)="moveBook(book, 'wantToRead')">Move to 'Want To Read' </button> <br>
                   <button id="current" (click)="moveBook(book, 'currentlyReading')">Move to 'Currently Reading'</button>
                   <button class="remove" (click)="removeBook(book)">Remove From My Shelves</button>
@@ -73,6 +72,5 @@
     </div>
 
   </div>
-  <h6><a routerLink="/">Return to Book Search</a></h6>
-  <h6><a routerLink="/search">Return to Book Search</a></h6>1
+  <h6><a routerLink="/home">Return to Book Search</a></h6>
 </div>

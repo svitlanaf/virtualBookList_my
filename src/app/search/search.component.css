@@ -2,7 +2,7 @@
 .card {
     margin: 0 auto;
     float: none;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 img#books {
@@ -20,7 +20,7 @@ img#books {
 .search_results {
     margin-top: 90px;
 }
-
+/*
 .grid {
   display: grid;
   grid-template-areas:
@@ -53,7 +53,7 @@ img#books {
 }
 #description {
   grid-area: description;
-}
+} */
 .book {
   /* border: solid 1px lightgray; */
   margin: 5px;

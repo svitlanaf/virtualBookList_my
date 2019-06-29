@@ -4,40 +4,35 @@ An app to search for and organize all the books on your reading list, using the 
 
 #### by Ian Christopher, Kevin Garvey, Svitlana Filanova, Marguerite Kennedy and Tessa Sullivan.
 
-### Description
 
-Is your IKEA bookshelf about to collapse under the weight of the books? Here's a way to find and organize everything you want to read and have read. User will be able to search books based on  based on data provided by the Google Books API. They will then be able to add these books to their "bookshelf," sorted by "read" or "unread."
+## Setup/Installation Requirements
 
-Future buildout could include links to other user bookshelves, or searching for book recommendations based on users who have at least one of the same books on their bookshelves, although that functionality is not in the immediate scope of this project. Other possible features could eventually include a "virtual librarian" that would recommend books based on interests, mood, etc. It could also directly download books in the public domain available via Google Books.
+* _Clone this repository on your Desktop._
+* _Open Terminal (for Mac users) or PowerShell (for Windows users), navigate to age_calculator folder(cd .../Desktop/doctor) and run the following command: npm install._
+* _Send one of us email to request FirebaseConfig. Once reseived copy api-keys.ts file in the project  src/app folder._
+* _You need to generate your own Google Books API key. Go to https://console.developers.google.com/apis/credentials?project=book-reviews-group-project&folder&organizationId > Credentials > Create credentials > API key. Copy your API key and paste in api-keys.ts file._
+* _Run the following command to install AngularFire and Firebase npm packages: npm install angularfire2@4.0.0-rc.0 firebase@^3.6.6 --save._
+* _Now run ng serve and open a localhost in your browser._
 
-## Prerequisites
+## Description
 
-You will need the following things properly installed on your computer.
+| User stories                                                                                          |
+|-------------------------------------------------------------------------------------------------------|
+| I should be able to login my account via Google.                                                      |
+| I should be able to search books by author, subject or title.                                         |
+| I should be able to add a selected book to one of shelves.                                            |
+| I should be able to see my book list.                                                                 |
+| In my book list I should be able to see books that I want to read, currently reading or already read. |
+| I should be able to move books to any shelf.                                                          |
+| I should be able to see book details.                                                                 |
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Angular.js]
-* [Firebase]
+## Known Bugs / Limitations
 
-## Installation
-
-* Contact us via Github for API and Firebase code
-* `git clone <repository-url>` this repository
-* `npm install`
-* `ng serve`
-* Navigate to `localhost:4200` in your browser
-* Find something great to read!
-
-## Code Specs
-
-|Behavior - Plain English|Input|Output|
-|---|---|---|
-|User lands on homepage.|User logs in to search books by *author, title and/or subject| The app returns a list of relevant books based on search |
-|User wants to create a "bookshelf" to sort books|Using checkboxes, user sorts books by by "Want to Read," "Currently Reading" and "Have Read.| Books with title and cover appear in the appropriate "shelf."|
+* _If you click "My list" in dropdown menu you'll see the following error in the console: "ERROR TypeError: Cannot read property 'length' of null at ShelfPipe.webpackJsonp.386.ShelfPipe.transform (shelf.pipe.ts:13)", but it doesn't affect the application's functionality._
 
 ## Technologies Used
 
-_Technologies used include NPM, Angular, Node.js, Javascript, Typescript, Firebase, Bootstrap, SCSS, SASS, HTML, and Git/Github and the Google Books API_
+_Angular, Node.js, Javascript, Typescript, Firebase, Bootstrap, HTML, API_
 
 _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0._
 
