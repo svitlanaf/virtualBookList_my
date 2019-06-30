@@ -15,21 +15,24 @@
               <h5>Total Ratings: <span id="details">{{bookToDisplay?.ratingsCount}}</span></h5>
               <div *ngIf="bookToDisplay?.shelf == 'currentlyReading'">
                 <p id="current">You are currently reading this book</p>
-                <button id="want" (click)="moveBook('wantToRead')">Move To My 'Want To Read' Shelf</button>
-                <button id="finished" (click)="moveBook('finishedReading')">Move To My 'Books I've Read' Shelf</button>
-                <button class="remove" (click)="removeBook()">Remove From My Shelves</button>
+                <button type="button" class="btn btn-danger"  (click)="moveBook('wantToRead')">Move To My 'Want To Read' Shelf</button><br>
+                <button type="button" class="btn btn-primary"  (click)="moveBook('finishedReading')">Move To My 'Books I've Read' Shelf</button><br>
+                <button type="button" class="btn btn-secondary"  (click)="removeBook()">Remove From My Shelves</button>
+                <br><br><h5><a routerLink="../../my-book-list">Return to My Shelves</a></h5>
               </div>
               <div *ngIf="bookToDisplay?.shelf == 'wantToRead'">
                 <p id="want">You want to read this book.</p>
-                <button id="current" (click)="moveBook('currentlyReading')">Move To My 'Currently Reading' Shelf</button>
-                <button id="finished" (click)="moveBook('finishedReading')">Move To My 'Books I've Read' Shelf</button>
-                <button class="remove" (click)="removeBook()">Remove From My Shelves</button>
+                <button type="button" class="btn btn-success"  (click)="moveBook('currentlyReading')">Move To My 'Currently Reading' Shelf</button><br>
+                <button type="button" class="btn btn-primary"  (click)="moveBook('finishedReading')">Move To My 'Books I've Read' Shelf</button><br>
+                <button type="button" class="btn btn-secondary"  (click)="removeBook()">Remove From My Shelves</button>
+                <br><br><h5><a routerLink="../../my-book-list">Return to My Shelves</a></h5>
               </div>
               <div *ngIf="bookToDisplay?.shelf == 'finishedReading'">
                 <p id="finished">You've read this book.</p>
-                <button id="want" (click)="moveBook('wantToRead')">Move To My 'Want To Read' Shelf</button>
-                <button id="current" (click)="moveBook('currentlyReading')">Move To My 'Currently Reading' Shelf</button>
-                <button class="remove" (click)="removeBook()">Remove From My Shelves</button>
+                <button type="button" class="btn btn-danger"  (click)="moveBook('wantToRead')">Move To My 'Want To Read' Shelf</button><br>
+                <button type="button" class="btn btn-success"  (click)="moveBook('currentlyReading')">Move To My 'Currently Reading' Shelf</button><br>
+                <button type="button" class="btn btn-secondary"  (click)="removeBook()">Remove From My Shelves</button>
+                <br><br><h5><a routerLink="../../my-book-list">Return to My Shelves</a></h5>
               </div>
             </div>
           </div>
@@ -40,6 +43,5 @@
       </div>
     </div>
   </div>
-  <h5><a routerLink="../../my-book-list">Return to My Shelves</a></h5>
-  <h5><a routerLink="/home">Home</a></h5>
+  <!-- <h5><a routerLink="/home">Home</a></h5> -->
 </div>

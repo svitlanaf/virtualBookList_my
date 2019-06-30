@@ -5,17 +5,22 @@ ul {
 
 h2 {
   text-align: center;
-  color: brown;
+  color: #3498db;
+}
+
+.btn {
+  margin-bottom: 5px;
+  width: 250px;
 }
 
 .container {
   margin: 0px;
-  padding: 50px;
+  padding: 10px;
   /* background-color: #f5f2df; */
   text-align: center;
 }
 
-button#bwant {
+/* button#bwant {
   color: #f5f2df;
   background-color: FireBrick;
   border-color: darkred;
@@ -41,7 +46,7 @@ button.remove {
   background-color: gray;
   border-color: darkgray;
   margin: 6px;
-}
+} */
 
 #want {
   color: #f5f2df;
@@ -87,7 +92,7 @@ button.remove {
   color: #f5f2df;
   background-color: SeaGreen;
   border-color: darkgreen;
-}
+} 
 
 #currentTitle {
   color: #f5f2df;
@@ -136,4 +141,5 @@ img {
   /* border: solid 2px black; */
   width: 180px;
   height: 240px;
+  cursor: pointer;
 }

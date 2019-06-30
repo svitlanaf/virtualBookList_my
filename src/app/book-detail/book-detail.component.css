@@ -18,17 +18,20 @@
 }
 
 .card#outer{
-  background-color: RebeccaPurple;
+  /* background-color: RebeccaPurple */
+  border: 2px grey;
 }
 
 .card-header {
-  background-color: MediumPurple;
+  /* background-color: MediumPurple; */
   text-align: center;
+  margin-left: 20px;
+  width: 945px;
 }
 
-.card#inner{
+/* .card#inner{
   background-color: MediumPurple;
-}
+} */
 
 #details {
   color: dimgray;
@@ -37,4 +40,14 @@
 button.remove {
   background-color: gray;
   border-color: darkgray;
+}
+
+.btn {
+  width: 310px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 232px;
+  height: 300px;
 }

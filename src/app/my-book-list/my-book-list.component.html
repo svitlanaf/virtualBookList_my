@@ -13,12 +13,12 @@
                   <h6>by {{book.authors}}</h6>
                   <h6>{{book.pageCount}} pages</h6>
                   <img (click)="goToDetailPage(book)" src = {{book.image}}><br>
-                  <button id="current" (click)="moveBook(book, 'currentlyReading')">Move To 'Currently Reading'</button>
+                  <button type="button" class="btn btn-success"  (click)="moveBook(book, 'currentlyReading')">Move To 'Currently Reading'</button>
                   <br>
-                  <button id="finished" (click)="moveBook(book, 'finishedReading')">Move to 'Books I've Read' </button><br>
-                  <button class="remove" (click)="removeBook(book)">Remove From My Shelves</button>
+                  <button type="button" class="btn btn-primary"  (click)="moveBook(book, 'finishedReading')">Move to 'Books I've Read' </button><br>
+                  <button type="button" class="btn btn-secondary"  (click)="removeBook(book)">Remove From My Shelves</button>
                 </div>
-              </div>
+              </div><br>
             </li>
           </ul>
         </div>
@@ -37,11 +37,11 @@
                   <h6>by {{book.authors}}</h6>
                   <h6>{{book.pageCount}} pages</h6>
                   <img (click)="goToDetailPage(book)" src = {{book.image}}><br>
-                  <button id="bwant" (click)="moveBook(book, 'wantToRead')">Move To 'Want To Read'</button>
-                  <button id="finished" (click)="moveBook(book, 'finishedReading')">Move to 'Books I've Read'</button>
-                  <button class="remove" (click)="removeBook(book)">Remove From My Shelves</button>
+                  <button type="button" class="btn btn-danger" (click)="moveBook(book, 'wantToRead')">Move To 'Want To Read'</button>
+                  <button type="button" class="btn btn-primary" (click)="moveBook(book, 'finishedReading')">Move to 'Books I've Read'</button>
+                  <button type="button" class="btn btn-secondary" (click)="removeBook(book)">Remove From My Shelves</button>
                 </div>
-              </div>
+              </div><br>
             </li>
           </ul>
         </div>
@@ -60,9 +60,9 @@
                   <h6>by {{book.authors}}</h6>
                   <h6>{{book.pageCount}} pages</h6>
                   <img (click)="goToDetailPage(book)" src = {{book.image}}>
-                  <button id="want" (click)="moveBook(book, 'wantToRead')">Move to 'Want To Read' </button> <br>
-                  <button id="current" (click)="moveBook(book, 'currentlyReading')">Move to 'Currently Reading'</button>
-                  <button class="remove" (click)="removeBook(book)">Remove From My Shelves</button>
+                  <button type="button" class="btn btn-danger"  (click)="moveBook(book, 'wantToRead')">Move to 'Want To Read' </button> <br>
+                  <button type="button" class="btn btn-success"  (click)="moveBook(book, 'currentlyReading')">Move to 'Currently Reading'</button>
+                  <button type="button" class="btn btn-secondary" (click)="removeBook(book)">Remove From My Shelves</button>
                 </div>
               </div><br>
             </li>
@@ -72,5 +72,5 @@
     </div>
 
   </div>
-  <h6><a routerLink="/home">Return to Book Search</a></h6>
+  <!-- <h6><a routerLink="/home">Return to Book Search</a></h6> -->
 </div>
