@@ -3,18 +3,21 @@
 }
 
 #want {
-  background-color: FireBrick;
-  border-color: darkred;
+  color: red;
+  margin-bottom: 7px;
+  margin-top: 7px;
 }
 
 #finished {
-  background-color: SteelBlue;
-  border-color: darkblue;
+  color: blue;
+  margin-bottom: 7px;
+  margin-top: 7px;
 }
 
 #current {
-  background-color: SeaGreen;
-  border-color: darkgreen;
+  color: green;
+  margin-bottom: 7px;
+  margin-top: 7px;
 }
 
 .card#outer{
@@ -50,4 +53,8 @@ button.remove {
 img {
   width: 232px;
   height: 300px;
+}
+
+a {
+  color: dimgray;
 }
