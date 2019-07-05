@@ -37,6 +37,7 @@ _Angular, Node.js, Javascript, Typescript, Firebase, Bootstrap, HTML, API_
 
 _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0._
 
+
 ### License
 *This software operates under the MIT license.*
 
